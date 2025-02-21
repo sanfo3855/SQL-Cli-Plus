@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sqlcli-plus"
+version = "0.0.1"
+authors = [
+  { name="Sanfelici Matteo", email="sanfelicimatteo@gmail.com" },
+]
+description = "A python wrapper around the SQL Cli for a more command-line friendly interaction (with custom post execution action for managing complex project with many schemas)"
+
+readme = "README.md"
+
+requires-python = ">=3.8"
+dependencies = [
+    "pyyaml"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+license = "	GPL-3.0-only"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/sanfo3855/sqlcli-plus"
+Issues = "https://github.com/sanfo3855/sqlcli-plus/issues"
+
+[project.scripts]
+# TODO understand  how to spam cli correctly
+cli-name = "sqlcli_plus:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sqlcli_plus"]
